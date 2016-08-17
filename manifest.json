@@ -1,0 +1,27 @@
+
+{
+  "manifest_version": 2,
+
+  "name": "Word Count",
+  "description": "This extension shows the word count and approximate reading time of the article in the tab",
+  "version": "1.0",
+
+    "permissions": [
+     "activeTab", 
+     "tabs", 
+     "<all_urls>"
+      
+  ],
+ 
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"], 
+      "js": ["get_text.js"]
+    }
+  ], 
+  
+  "browser_action": {
+    "default_icon": "icon_v2.png", 
+    "default_popup": "popup.html"
+  }
+}
